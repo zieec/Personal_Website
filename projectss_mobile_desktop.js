@@ -273,7 +273,7 @@ function buttonLinksStyle(txt) {
 // Buat tombol dan terapkan gaya
 const seeLive = document.createElement('a');
 seeLive.innerHTML = projectButtons.button1; // Hanya teks "Home"
-seeLive.href = '/index.html'; // Href untuk navigasi
+seeLive.href = 'index.html'; // Href untuk navigasi
 buttonLinksStyle(seeLive);
 
 // Kontainer tombol
