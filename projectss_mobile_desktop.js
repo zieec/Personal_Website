@@ -223,7 +223,7 @@ function buttonLinksStyle(txt) {
 
 const seeLive = document.createElement('a');
 seeLive.innerHTML = projectButtons.button1;
-seeLive.href = './Personal_Website';
+seeLive.href = './';
 buttonLinksStyle(seeLive);
 
 const Buttons = document.createElement('div');
