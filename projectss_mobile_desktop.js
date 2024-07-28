@@ -1,7 +1,7 @@
 /** ****** Projects techs ********* */
 const technologiesUsed = {
   htmlCss: 'Web Development',
-  JavaScript: 'Networking',
+  ruby: 'Networking',
 };
 
 function techStyle(tech, techType) {
@@ -15,8 +15,8 @@ tech1.innerHTML = technologiesUsed.htmlCss;
 techStyle(tech1, 'web-development');
 
 const tech2 = document.createElement('li');
-tech3.innerHTML = technologiesUsed.JavaScript;
-techStyle(tech3, 'networking');
+tech2.innerHTML = technologiesUsed.ruby;
+techStyle(tech2, 'networking');
 
 const techs = document.createElement('ul');
 techs.setAttribute('style', '\
@@ -29,7 +29,6 @@ height: auto;');
 
 techs.appendChild(tech1);
 techs.appendChild(tech2);
-techs.appendChild(tech3);
 
 document.body.appendChild(techs);
 
