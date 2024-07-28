@@ -1,7 +1,6 @@
 /** ****** Projects techs ********* */
 const technologiesUsed = {
   htmlCss: 'Web Development',
-  ruby: 'IoT',
   JavaScript: 'Networking',
 };
 
@@ -16,10 +15,6 @@ tech1.innerHTML = technologiesUsed.htmlCss;
 techStyle(tech1, 'web-development');
 
 const tech2 = document.createElement('li');
-tech2.innerHTML = technologiesUsed.ruby;
-techStyle(tech2, 'iot');
-
-const tech3 = document.createElement('li');
 tech3.innerHTML = technologiesUsed.JavaScript;
 techStyle(tech3, 'networking');
 
