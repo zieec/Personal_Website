@@ -220,27 +220,32 @@
           <h2>Portfolio</h2>
         </li>
         <li class="card">
-          <img src="./images/Rectangle21_2.png" alt="project image" class="card-pic">
+          <div class="image-container">
+            <img src="./Sertifikat/mikrotik1.jpg" alt="project image" class="card-pic" />
+            <img src="./Sertifikat/data1.png" alt="project image" class="card-pic" />
+            <img src="./Sertifikat/Muhammad Satrio.png" alt="project image" class="card-pic" />
+            <!-- Tambahkan lebih banyak gambar jika perlu -->
+          </div>
           <div class="card-desc">
             <h3 class="ttl-3">My Portfolio</h3>
             <ul class="techs">
-              <li class="tech">Web Development</li>
-              <li class="tech">Networking</li>
+              <li class="tech" id="web-dev-btn">Web Development</li>
+              <li class="tech" id="iot-btn">Networking</li>
             </ul>
             <button type="button" class="see-btn btn" id="see-portfolio-btn">
               See Portfolio
               <img src="./linkpics/Seeit.svg" alt="">
             </button>
           </div>
-        </li>
+        </li>        
       </ul>
     </section>
-
+    
     <section id="section3">
       <div class="cards abt">
         <h2 class="ttl">About</h2>
         <p class="txt" id="about-text"></p>
-        <a href="https://online.updf.com/index/share/en-US?shareId=659823ce-bc9b-4a29-9ba4-701ce89675b4" class="btn" id="cv-button" style="display: none;">
+        <a href="https://online.updf.com/index/share/en-US?shareId=b4de7a6d-5945-4aa3-8f33-302cc8c44949" class="btn" id="cv-button" style="display: none;">
           <button type="button" class="btn">
             Get My Curriculum Vitae
           </button>
@@ -254,7 +259,7 @@
           <li class="competence">•<span>English</span></li>
           <li class="icon"><img src="./images/bahasa.png" alt="Language Icon"></li>
         </ul>
-      
+        
         <ul class="competences cmps-2">
           <li><h3 class="cmp-ttl">Hard Skills</h3></li>
           <li class="competence">•<span>Network Engineering</span></li>
@@ -262,14 +267,15 @@
           <li class="competence">•<span>Internet of Things</span></li>
           <li class="icon"><img src="./images/hs2.png" alt="Hard Skills Icon"></li>
         </ul>
-      
+        
         <ul class="competences cmps-3">
           <li><h3 class="cmp-ttl">Soft Skills</h3></li>
           <li class="competence">•<span>Critical Thinking</span></li>
           <li class="competence">•<span>Public Speaking</span></li>
           <li class="competence">•<span>Leadership</span></li>
-          <li class="icon"><img src="./images/kr1.png" alt="Soft Skills Icon"></li>
+          <li class="icon"><img src="./images/ss1.png" alt="Soft Skills Icon"></li>
         </ul>
+        
       </div>
       
       
@@ -494,24 +500,26 @@
   </style>
   <script>
     document.addEventListener("DOMContentLoaded", function() {
-    const collaborateElement = document.getElementById('lets-collaborate');
+  const competences = document.querySelectorAll('.competences');
 
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
+  const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.1
+  };
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                //observer.unobserve(entry.target); // Optional: Menghentikan pengamatan setelah animasi dijalankan
-            }
-        });
-    }, observerOptions);
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        //observer.unobserve(entry.target); // Optional: Menghentikan pengamatan setelah animasi dijalankan
+      }
+    });
+  }, observerOptions);
 
-    observer.observe(collaborateElement);
+  competences.forEach(comp => {
+    observer.observe(comp);
+  });
 });
   </script>
  <script>
@@ -522,14 +530,18 @@
 
     let index = 0;
     let isTyping = false;
+    const cursor = document.createElement("span");
+    cursor.classList.add("typing-cursor");
+    textElement.appendChild(cursor);
 
     function typeText() {
       if (index < text.length) {
-        textElement.innerHTML += text.charAt(index);
+        textElement.innerHTML = text.slice(0, index + 1);
+        textElement.appendChild(cursor);
         index++;
         setTimeout(typeText, 16); // Kecepatan mengetik, dalam milidetik
       } else {
-        textElement.style.borderRight = "none"; // Menghilangkan kursor berkedip setelah mengetik selesai
+        cursor.style.display = "none"; // Menghilangkan kursor berkedip setelah mengetik selesai
         buttonElement.style.display = "block"; // Menampilkan tombol setelah mengetik selesai
         setTimeout(() => buttonElement.classList.add('show'), 50); // Menambahkan kelas 'show' untuk animasi muncul
       }
@@ -546,6 +558,26 @@
     });
 
     observer.observe(textElement);
+  });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const images = document.querySelectorAll('.image-container img');
+    let currentIndex = 0;
+
+    function changeImage() {
+      images.forEach((img, index) => {
+        img.classList.remove('active');
+        if (index === currentIndex) {
+          img.classList.add('active');
+        }
+      });
+
+      currentIndex = (currentIndex + 1) % images.length;
+    }
+
+    setInterval(changeImage, 2000); // Ganti gambar setiap 2 detik
+    changeImage(); // Tampilkan gambar pertama
   });
 </script>
 
