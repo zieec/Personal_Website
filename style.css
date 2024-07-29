@@ -340,6 +340,7 @@ body {
     height: auto;
     display: flex;
     margin-left: 10px;
+    gap: 70px;
   }
 
   .link { /* default link style, also for the menu link on header */
@@ -428,6 +429,8 @@ body {
   .join {
     width: 100%;
     max-width: none;
+    justify-content: center; /* Mengatur logo agar berada di tengah secara horizontal */
+    align-items: center; 
   }
 }
 
@@ -835,3 +838,79 @@ html {
 .tech {
   animation: fadeIn 0.5s ease-in-out;
 }
+/* Animasi untuk slide-in */
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.animate {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.animate.visible {
+  transform: scale(1.1);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.competences {
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.5s ease;
+}
+
+.competences.visible {
+  opacity: 1;
+}
+
+.competences.cmps-1.visible {
+  animation: slideInLeft 0.6s forwards;
+}
+
+.competences.cmps-2.visible {
+  animation: slideInRight 0.6s forwards;
+}
+
+.competences.cmps-3.visible {
+  animation: slideInLeft 0.6s forwards;
+}
+
+.image-container {
+  position: relative;
+  width: 100%;
+  height: 300px; /* Sesuaikan dengan ukuran gambar */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  filter: blur(2.5px); /* Menambahkan efek blur pada gambar */
+}
+
+.image-container img.active {
+  opacity: 1;
+}
+
