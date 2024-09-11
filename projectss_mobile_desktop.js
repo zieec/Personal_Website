@@ -38,6 +38,10 @@ const images = {
   image2: document.createElement('img'),
   image3: document.createElement('img'),
   image4: document.createElement('img'),
+  image5: document.createElement('img'),
+  image6: document.createElement('img'),
+  image7: document.createElement('img'),
+  image8: document.createElement('img'),
 };
 
 function imagesStyle(img, isActive = false) {
@@ -74,7 +78,23 @@ const img4 = images.image4;
 img4.setAttribute('src', './images/satrioterminasi.jpg');
 imagesStyle(img4);
 
-const imgArray = [img1, img2, img3, img4];
+const img5 = images.image5;
+img5.setAttribute('src', './images/satrioplc2.jpg');
+imagesStyle(img1, true);
+
+const img6 = images.image6;
+img6.setAttribute('src', './images/projek1.jpg');
+imagesStyle(img2);
+
+const img7 = images.image7;
+img7.setAttribute('src', './images/projek.jpg');
+imagesStyle(img3);
+
+const img8 = images.image8;
+img8.setAttribute('src', './images/satriopgri.jpg');
+imagesStyle(img4);
+
+const imgArray = [img1, img2, img3, img4, img5, img6, img7, img8];
 let currentImgIndex = 0;
 
 /** ********** Image container ********** */
@@ -109,7 +129,7 @@ const texts = {
 
   text1: ' In order to continue to improve, hone and prove the skills that I have, I have taken part in training and certification several times. ',
 
-  text2: ' Mikrotik training by IDN.ID, Data Analysis Training by MySkill x Delloite, Web Development training by Edspert.Id, Fiber Optic Academy by Telkom Indonesia. ',
+  text2: ' Mikrotik training by IDN.ID, Data Analysis Training by MySkill x Delloite, Web Development training by Edspert.Id, Fiber Optic Academy by Telkom Indonesia, Create a program to run the Program Logic Controller (PLC) ,Create a pest repellent device using Hz frequency based on IoT connected to Telegram, and display and promote it at a school exhibition attended by many visiting companies, and present it to all PGRI guest teachers from all over Indonesia.',
 };
 
 const projectName = document.createElement('h2');
@@ -217,7 +237,7 @@ function buttonLinksStyle(txt) {
 
 const seeLive = document.createElement('a');
 seeLive.innerHTML = projectButtons.button1;
-seeLive.href = './';
+seeLive.href = '/index.html';
 buttonLinksStyle(seeLive);
 
 const Buttons = document.createElement('div');
@@ -297,3 +317,4 @@ function closeProject() {
   document.body.removeChild(modal);
 }
 closeModal.addEventListener('click', closeProject);
+
