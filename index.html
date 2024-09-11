@@ -149,8 +149,7 @@
 
     #collaborate-form input:focus, 
     #collaborate-form textarea:focus {
-      border-color: #72c3fc;
-      box-shadow: 0 0 5px rgba(114, 195, 252, 0.5);
+      box-shadow: 0 0 15px rgba(114, 195, 252, 1);
       outline: none;
     }
 
@@ -161,7 +160,7 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  transition: background 0.3s ease, transform 0.3s ease;
+  transition: 0.3s ease, transform 0.3s ease;
 }
 
 #collaborate-form button:hover {
@@ -223,7 +222,7 @@
           <div class="image-container">
             <img src="./Sertifikat/mikrotik1.jpg" alt="project image" class="card-pic" />
             <img src="./Sertifikat/data1.png" alt="project image" class="card-pic" />
-            <img src="./Sertifikat/Muhammad Satrio.png" alt="project image" class="card-pic" />
+            <img src="./images/satriopgri.jpg" alt="project image" class="card-pic" />
             <!-- Tambahkan lebih banyak gambar jika perlu -->
           </div>
           <div class="card-desc">
@@ -241,17 +240,24 @@
       </ul>
     </section>
     
+    <div>
     <section id="section3">
       <div class="cards abt">
         <h2 class="ttl">About</h2>
-        <p class="txt" id="about-text"></p>
-        <a href="https://online.updf.com/pdf/share?shareId=837742959083397120" class="btn" id="cv-button" style="display: none;">
+        <div class="text-wrapper">
+          <p class="txt typing-animation"  id="about-text">
+          </p>
+        </div>
+        <a href="https://sg.docworkspace.com/d/sIIbN_LmHAbfWhLcG" class="btn" id="cv-button" style="display: none;">
           <button type="button" class="btn">
             Get My Curriculum Vitae
           </button>
         </a>
-      </div>    
-       
+      </div>
+    </section>
+    </div>  
+    
+    <section id="section3-skills"></section>
       <div class="block">
         <ul class="competences cmps-1">
           <li><h3 class="cmp-ttl">Languages</h3></li>
@@ -273,11 +279,10 @@
           <li class="competence">•<span>Critical Thinking</span></li>
           <li class="competence">•<span>Public Speaking</span></li>
           <li class="competence">•<span>Leadership</span></li>
-          <li class="icon"><img src="./images/kr1.png" alt="Soft Skills Icon"></li>
+          <li class="icon"><img src="./images/ss1.png" alt="Soft Skills Icon"></li>
         </ul>
-        
       </div>
-      
+    </section>
       
   </main>
 
@@ -293,36 +298,75 @@
     <p id="status"></p>
 </section>
   
+<section class="info_section rounded-rectangle">
+  <div class="container">
+    <div class="row flex-container">
+      <!-- Address Section -->
+      <div class="col-md-6 col-lg-3 info_col">
+        <div class="info_contact">
+          <h4>Address</h4>
+          <div class="contact_social_wrapper">
+            <div class="contact_link_box">
+              <a href="https://maps.app.goo.gl/KdMcQXa4FXaPZNiR8" class="hover-effect">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <li class="icon"><img src="./images/address1.png" alt="Contact Icon"></li><span>Address</span>
+              </a>
+            </div>
+          </div>
+          
+          <!-- New div added here -->
+          <div class="additional_info">
+            <h4>Social Profiles</h4>
+          <div class="contact_social_wrapper">
+            <div class="contact_link_box">
+              <a href="https://wa.me/6281285792474" class="hover-effect">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <li class="icon"><img src="./images/contact2.png" alt="Contact Icon"></li>
+              </a>
+            </a>
+            <a href="mailto:satriopratomo2008@gmail.com" class="hover-effect">
+              <i class="fa fa-phone" aria-hidden="true"></i>
+              <li class="icon"><img src="./linkpics/email png (7).png" alt="Contact Icon"></li>
+            </a>
+            <a href="https://instagram.com/satxts" class="hover-effect">
+              <i class="fa fa-map-marker" aria-hidden="true"></i>
+              <li class="icon"><img src="./linkpics/ig png (6).png" alt="Contact Icon"></li>
+            </a>
+          </div>
+        </div>
+    </div>
+    
+  
+                  </div>
+                  </div>
+                  
+              </div>
+              <div class="info_social a">
+                  <a href="" class="hover-effect"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                  <a href="" class="hover-effect"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                  <a href="" class="hover-effect"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                  <a href="" class="hover-effect"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+              </div>
+          </div>
+         
+          </div>
+          <!-- Links Section -->
+          <div class="col-md-6 col-lg-2 mx-auto info_col">
+              <div class="info_link_box">
+                  <h4>Links</h4>
+                  <div class="info_links">
+                      <a class="active hover-effect" href="#section1">Home</a>
+                      <a class="hover-effect" href="#section2">Portfolio</a>
+                      <a class="hover-effect" href="#section3-skills">Skills</a>
+                      <a class="hover-effect" href="#lets-collaborate">Contact Me</a>
+                  </div>
+              </div>
+          </div>
+          
+      </div>
   </div>
-
-  <div class="join white-icons">
-    <ul class="links" style="list-style-type: none; padding: 0; margin: 0;">
-      <li class="link">
-        <a href="https://www.instagram.com/satxts">
-          <div class="social-icon">
-            <img src="./linkpics/ig png (6).png" alt="Instagram" />
-          </div>
-        </a>
-      </li>
-      <li class="link">
-        <a href="https://wa.me/6281285792474">
-          <div class="social-icon">
-            <img src="./linkpics/wa png (4).png" alt="WhatsApp" />
-          </div>
-        </a>
-      </li>
-      <li class="link">
-        <a href="mailto:satriopratomo2008@gmail.com">
-          <div class="social-icon">
-            <img src="./linkpics/email png (7).png" alt="Email" />
-          </div>
-        </a>
-      </li>
-    </ul>
-  </div>
-</footer>
-
-
+</section
+<script>   
   <script src="projectss_mobile_desktop.js"></script>
   <script src="mobile_menu.js"></script>
   <script>
