@@ -237,7 +237,7 @@ function buttonLinksStyle(txt) {
 
 const seeLive = document.createElement('a');
 seeLive.innerHTML = projectButtons.button1;
-seeLive.href = '/index.html';
+seeLive.href = 'https://zieec.github.io/Personal_Website/';
 buttonLinksStyle(seeLive);
 
 const Buttons = document.createElement('div');
